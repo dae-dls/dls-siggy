@@ -5,13 +5,13 @@ import pytest
 import multiprocessing
 
 # Hazzathread we test if it can go out of scope without joining.
-from lib_maxiv_hazzathread.hazzathread import Hazzathread
+from dls_hazzathread_lib.hazzathread import Hazzathread
 
 # Class which is base for main programs.
-from lib_maxiv_mainiac.mainiac import Mainiac
+from dls_mainiac_lib.mainiac import Mainiac
 
 # Class under test.
-from dls_signals.global_signals import global_sigint
+from dls_signals_lib.global_signals import global_sigint
 
 
 import logging

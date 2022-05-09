@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-test_require = ["lib-maxiv-hazzathread", "lib-maxiv-mainiac", "logging-formatter"]
+test_require = ["dls-hazzathread", "dls-mainiac", "logging-formatter"]
 
 
 def main():
