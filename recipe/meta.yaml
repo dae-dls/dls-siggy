@@ -1,0 +1,39 @@
+package:
+  name: dls-signals
+  version: "0.0.6"
+
+source:
+  # Relative path to the parent directory of the recipe.
+  path: ..
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python >=3.6
+  run:
+    - python >=3.6
+
+test:
+  imports:
+    - dls_signals_lib
+  requires:
+    - pip
+  commands:
+    - pip check
+    - python3 -m dls_signals_lib.version --json
+
+about:
+  home: https://gitlab.maxiv.lu.se/kits-maxiv/dls-signals
+  license: LGPL-3.0-or-later
+  license_file: ../LICENSE.txt
+  summary: This is a Python library with API for high level unix signal handling.
+  description: |
+    The software development group needs a simple high level API to capture and report unix signals, such as control-C.
+    This reduces development time to create and test a signal handling in command line and gui programs.
+    This library provides a signal class with state and counting, as well as a global (module) instance of it.
+
+
