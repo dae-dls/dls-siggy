@@ -1,20 +1,17 @@
 from setuptools import setup, find_packages
 
 
-test_require = ["dls-hazzathread", "dls-mainiac", "logging-formatter"]
-
-
 def main():
-    """Main method collecting all the parameters to setup."""
     name = "dls-signals"
-    version = "0.0.6"
-    description = "Library for collecting signal timing during a running program."
-    author = "David Erb, KITS - Controls"
-    author_email = "KITS@maxiv.lu.se"
+    version = "1.0.2"
+    description = "Signals library."
+    author = "David Erb"
+    author_email = "david.erb@diamond.ac.uk"
     license = "GPLv3"
-    url = "https://gitlab.maxiv.lu.se/kits-maxiv/dls-signals"
-    packages = find_packages(".", exclude=["tests"])
-    install_requires = (["setuptools"],)
+    url = "https://github.com"
+    packages = find_packages(exclude=["tests", "*.tests.*", "tests.*", "tests"])
+    install_requires = []
+    include_package_data = True
 
     setup(
         name=name,
@@ -26,7 +23,7 @@ def main():
         url=url,
         packages=packages,
         install_requires=install_requires,
-        extras_require={"tests": test_require},
+        include_package_data=include_package_data,
     )
 
 

@@ -10,3 +10,7 @@ __pycache__
 .coverage
 
 gitrun-unittest.log
+
+
+build/
+dls_signals.egg-info/
