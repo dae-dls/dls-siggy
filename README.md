@@ -23,22 +23,24 @@ global_sigint.activate()
 assert global_sigint.count() == 2
 ```
 
+## Installation
+```
+pip3 install git+https://github.com/david-a-erb/dls-signals.git@develop
+```
 
 ## FAQ
 
 ____________________________________________________________________________
 #### How do you update the version?
 
-```semver bump patch```  
-```semver bump minor```  
-```semver bump major```   
-
-See https://gitlab.maxiv.lu.se/kits-maxiv/app-maxiv-semver
+```make bump-patch```  
+```make bump-minor```  
+```make bump-major```   
 
 ____________________________________________________________________________
 #### What remains to be done?
 
-- A simple bare-bones test.
-- Ability to insert custom signal handling
+- Ability to insert custom signal handling.
+- Handle more signals than just sigint.
 - Change module level global_signals to true singleton object.
 
