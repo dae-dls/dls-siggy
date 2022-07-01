@@ -13,7 +13,7 @@ test-02-sigint2:
 # GitLab CI.
 
 gitlab_ci_test:
-	python3 -m pytest -sv -rfp --capture=no --cov=dls_signals_lib \
+	python3 -m pytest -sv -rfp --capture=no --cov=dls_siggy_lib \
 		tests/test_01_sigint.py
 
 pytest:
@@ -33,8 +33,8 @@ list:
 	@awk "/^[^\t:]+[:]/" Makefile | grep -v ".PHONY"
 
 show-version:
-	PYTHONPATH=$(PYTHONPATH) python3 -m dls_signals_lib.version --json
-	PYTHONPATH=$(PYTHONPATH) python3 -m dls_signals_lib.version
+	PYTHONPATH=$(PYTHONPATH) python3 -m dls_siggy_lib.version --json
+	PYTHONPATH=$(PYTHONPATH) python3 -m dls_siggy_lib.version
 
 # ------------------------------------------------------------------
 # Version bumping.  Configured in setup.cfg. 

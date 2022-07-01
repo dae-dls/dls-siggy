@@ -11,7 +11,7 @@ from dls_hazzathread_lib.hazzathread import Hazzathread
 from dls_mainiac_lib.mainiac import Mainiac
 
 # Class under test.
-from dls_signals_lib.global_signals import global_sigint
+from dls_siggy_lib.global_signals import global_sigint
 
 
 import logging
@@ -53,6 +53,7 @@ class Test_01_sigint:
         if failure_message is not None:
             pytest.fail(failure_message)
 
+
 # ---------------------------------------------------------------------------------
 class _Process(multiprocessing.Process):
     def __init__(self):
@@ -65,9 +66,9 @@ class _Process(multiprocessing.Process):
         # Run the gui wrapped in a try/catch.
         app.try_run_catch()
 
+
 # ---------------------------------------------------------------------------------
 class _Context(object):
-
     def __init__(self, name, manager):
         self._name = name
         self._manager = manager
@@ -82,6 +83,7 @@ class _Context(object):
         logger.info("Context exiting")
         self._manager[self._name] = "exited"
 
+
 # ---------------------------------------------------------------------------------
 class _Thread(Hazzathread):
     def __init__(self, name):
@@ -92,6 +94,7 @@ class _Thread(Hazzathread):
         logger.info("Thread sleeping")
         time.sleep(10.0)
         logger.info("Thread finished")
+
 
 # ---------------------------------------------------------------------------------
 class _File(object):
@@ -105,6 +108,7 @@ class _File(object):
         logger.info("File %s destructing" % (self._name))
         self._manager[self._name] = "destructed"
 
+
 # ---------------------------------------------------------------------------------
 class _Subobject(object):
     def __init__(self, name):
@@ -112,6 +116,7 @@ class _Subobject(object):
 
     def __del__(self):
         logger.info("Subobject %s destructing" % (self._name))
+
 
 # ---------------------------------------------------------------------------------
 class _App(Mainiac):
@@ -121,9 +126,9 @@ class _App(Mainiac):
 
     def __init__(
         self,
-        app_name, 
+        app_name,
     ):
-        super().__init__(app_name)    
+        super().__init__(app_name)
 
     # ----------------------------------------------------------
     def run(self):
@@ -149,7 +154,9 @@ class _App(Mainiac):
             with _Context("context1", manager) as context:
                 manager["sleep1"] = "sleeping"
                 time.sleep(3)
-                logger.info("woke from sleep after %0.3f seconds" % (time.time()-start_time))
+                logger.info(
+                    "woke from sleep after %0.3f seconds" % (time.time() - start_time)
+                )
                 manager["sleep1"] = "awoke"
 
         except KeyboardInterrupt as exception:
@@ -170,5 +177,3 @@ class _App(Mainiac):
         assert manager["file2"] == "destructed", "file2"
         assert manager["context1"] == "exited", "context1"
         assert thread.is_running()
-
-

@@ -4,7 +4,7 @@ import json
 import pytest
 
 # The device version.
-from dls_signals_lib.version import meta as version_meta
+from dls_siggy_lib.version import meta as version_meta
 
 # Formatting of testing log messages.
 from dls_logform.dls_logform import DlsLogform

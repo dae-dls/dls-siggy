@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 
 def main():
-    name = "dls-signals"
-    version = "1.0.3"
+    name = "dls-siggy"
+    version = "2.0.0"
     description = "Signals library."
     author = "David Erb"
     author_email = "david.erb@diamond.ac.uk"

@@ -1,4 +1,4 @@
-# dls-signals
+# dls-siggy
 
 ## Summary
 
@@ -14,7 +14,7 @@ This is a Python library with API for high level unix signal handling.
 Please see the tests for more working examples.
 
 ```python
-from dls_signals_lib.global_signals import global_sigint
+from dls_siggy_lib.global_signals import global_sigint
 ...
 # Activate the signal handling.
 global_sigint.activate()
@@ -25,7 +25,7 @@ assert global_sigint.count() == 2
 
 ## Installation
 ```
-pip3 install git+https://github.com/david-a-erb/dls-signals.git@develop
+pip3 install git+https://github.com/david-a-erb/dls-siggy.git@develop
 ```
 
 ## FAQ

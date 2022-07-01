@@ -1,14 +1,15 @@
 import argparse
 import json
 
-import dls_signals_lib
+import dls_siggy_lib
 
 # ----------------------------------------------------------
 def version():
     """
     Current version.
     """
-    return dls_signals_lib.__version__
+    return dls_siggy_lib.__version__
+
 
 # ----------------------------------------------------------
 def meta(given_meta=None):
@@ -17,7 +18,7 @@ def meta(given_meta=None):
     Adds version information to given meta, if any.
     """
     s = {}
-    s["dls_signals_lib"] = version()
+    s["dls_siggy_lib"] = version()
 
     if given_meta is not None:
         given_meta.update(s)

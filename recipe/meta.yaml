@@ -1,5 +1,5 @@
 package:
-  name: dls-signals
+  name: dls-siggy
   version: "0.0.6"
 
 source:
@@ -19,15 +19,15 @@ requirements:
 
 test:
   imports:
-    - dls_signals_lib
+    - dls_siggy_lib
   requires:
     - pip
   commands:
     - pip check
-    - python3 -m dls_signals_lib.version --json
+    - python3 -m dls_siggy_lib.version --json
 
 about:
-  home: https://gitlab.maxiv.lu.se/kits-maxiv/dls-signals
+  home: https://gitlab.maxiv.lu.se/kits-maxiv/dls-siggy
   license: LGPL-3.0-or-later
   license_file: ../LICENSE.txt
   summary: This is a Python library with API for high level unix signal handling.
