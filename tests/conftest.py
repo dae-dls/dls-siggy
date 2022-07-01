@@ -7,7 +7,7 @@ import pytest
 from dls_signals_lib.version import meta as version_meta
 
 # Formatting of testing log messages.
-from dls_logging_formatter.dls_logging_formatter import DlsLoggingFormatter
+from dls_logform.dls_logform import DlsLogform
 
 import logging
 
@@ -24,7 +24,7 @@ def logging_setup(request):
     print("")
 
     handler = logging.StreamHandler()
-    handler.setFormatter(DlsLoggingFormatter())
+    handler.setFormatter(DlsLogform())
     logging.getLogger().addHandler(handler)
     logging.getLogger().setLevel(logging.DEBUG)
 

@@ -1,5 +1,5 @@
 
-PYTHONPATH=src:../dls-hazzathread/src:../dls-mainiac/src:../dls-logging-formatter/src
+PYTHONPATH=src:../dls-hazzathread/src:../dls-mainiac/src:../dls-logform/src
 
 # ------------------------------------------------------------------
 # Tests.

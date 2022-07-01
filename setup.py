@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 def main():
     name = "dls-signals"
-    version = "1.0.2"
+    version = "1.0.3"
     description = "Signals library."
     author = "David Erb"
     author_email = "david.erb@diamond.ac.uk"
