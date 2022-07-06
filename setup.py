@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 def main():
     name = "dls-siggy"
-    version = "2.0.0"
-    description = "Signals library."
+    version = "2.0.1"
+    description = "Python library for simple Unix signal capture."
     author = "David Erb"
     author_email = "david.erb@diamond.ac.uk"
     license = "GPLv3"

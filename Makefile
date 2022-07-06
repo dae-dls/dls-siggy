@@ -1,4 +1,4 @@
-
+# Path for testing if these dependencies are not installed.
 PYTHONPATH=src:../dls-hazzathread/src:../dls-mainiac/src:../dls-logform/src
 
 # ------------------------------------------------------------------

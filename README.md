@@ -2,7 +2,7 @@
 
 ## Summary
 
-Python class enhancing signal handling.
+Python library for simple Unix signal capture.
 
 The software development group needs a simple high level API to capture and report unix signals, such as control-C.
 This reduces development time to create and test a signal handling in command line and gui programs.
@@ -25,7 +25,7 @@ assert global_sigint.count() == 2
 
 ## Installation
 ```
-pip3 install git+https://github.com/david-a-erb/dls-siggy.git@develop
+pip install git+https://github.com/dae-dls/dls-siggy.git
 ```
 
 ## FAQ
