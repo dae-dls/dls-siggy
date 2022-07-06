@@ -12,18 +12,8 @@ test-02-sigint2:
 # ------------------------------------------------------------------
 # GitLab CI.
 
-gitlab_ci_test:
-	python3 -m pytest -sv -rfp --capture=no --cov=dls_siggy_lib \
-		tests/test_01_sigint.py
-
 pytest:
-	PYTHONPATH=$(PYTHONPATH) python3 -m pytest --capture=no 
-
-test-ci:
-	PYTHONPATH=$(PYTHONPATH) make -s gitlab_ci_test
-
-gitrun-unittest:
-	gitlab-runner exec docker unittest 2>&1 | tee gitrun-unittest.log
+	PYTHONPATH=$(PYTHONPATH) python3 -m pytest
 
 # ------------------------------------------------------------------
 # Utility.

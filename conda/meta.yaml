@@ -1,6 +1,6 @@
 package:
   name: dls-siggy
-  version: "0.0.6"
+  version: "2.0.2"
 
 source:
   # Relative path to the parent directory of the recipe.
@@ -27,7 +27,7 @@ test:
     - python3 -m dls_siggy_lib.version --json
 
 about:
-  home: https://gitlab.maxiv.lu.se/kits-maxiv/dls-siggy
+  home: https://github.com/dae-dls/dls-siggy
   license: LGPL-3.0-or-later
   license_file: ../LICENSE.txt
   summary: This is a Python library with API for high level unix signal handling.
